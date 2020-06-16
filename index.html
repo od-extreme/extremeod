@@ -1,50 +1,89 @@
 <html>
   <head>
 <style type="text/css">
-	.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(media/hatching/noise.jpg);
+  animation: animate .5s steps(10) infinite;
 }
 
-.fullscreen-bg__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
+@keyframes animate 
+{
+   0%
+   {
+    background-position: 0 0;
+   }
+   100%
+   {
+    background-position: 100% 100%; 
+   }
+
 }
 
-@media (max-width: 767px) {
-    .fullscreen-bg {
-        background: url('') center center / cover no-repeat;
-    }
-
-    .fullscreen-bg__video {
-        display: none;
-    }
+.magia {
+    position: relative;
+    display: inline-block;
 }
+
+.magia .img-top {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 99;
+}
+
+.magia:hover .img-top {
+ display: inline;
+}
+
+	a
+	{
+		color: rgba(255,255,255);
+		font-family: 'Major Mono Display', monospace;
+	}
+
+  a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: line-through;
+}
+
+a:active {
+  text-decoration: overline;
+}
+
+.magia:hover {
+  animation: shake .1s infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: translate(-2px, 2px); }
+  33% { transform: translate(-2px, 4px); }
+  66% { transform: translate(-4px, 4px); }
+  100% { transform: translate(-4px, 2px); }
+}
+
+
+
+
 </style>
-  	<div class="fullscreen-bg">
-      <video loop muted autoplay poster="media/firstframe.png" class="fullscreen-bg__video">
-        <source src="media/background.webm" type="video/webm">
-      </video>
-    </div>
 
     <meta charset="utf-8">
-   <title>OVERDOSE</title>
+   <title>OVERDOSE.wtf</title>
   </head>
- <body bgcolor="black">
+ <body background="">
  	<center>
  		<br>
  		<br>
@@ -53,12 +92,21 @@
  		<br>
  		<br>
   	<br>
-  	<a href=""><img src="media/skeleton.gif"></a> 
+  	<a href="">    
+        <div class="magia">
+           <img src="media/hatching/overdose01.png" width="800">
+           <img src="media/hatching/overdose02.png" width="800" class="img-top">
+        </div>
+      </a> 
   	<br>
-  	<iframe width="560" height="315" src="https://www.youtube.com/embed/LI3T2Mo0odA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-     <br>
-  	<a href="perfil.html"><h3>PERFIL</h3></a>
+    <br>
+    <a href="proyectos.html"><h1>PROYECTOS</a>
+      -
+  	<a href="perfil.html">PERFIL</h1></a>
+
+
     </center>
+
 
 <!-- 6e 6f 72 6d 61 6c 6d 65 6e 74 65 20 65 73 74 6f 20 73 65 72 69 61 20 75 6e 20 6d 65 6e 73 61 6a 65 20 73 65 63 72 65 74 6f 20 65 78 70 6c 69 63 61 6e 64 6f 20 61 6c 67 6f 2c 20 70 65 72 6f 20 65 73 20 73 6f 6c 6f 20 75 6e 61 20 6e 6f 74 61 20 6d 75 79 20 22 73 65 63 72 65 74 61 22 0a 73 69 20 6c 6f 67 72 61 73 74 65 20 64 65 73 63 69 66 72 61 72 20 65 73 74 6f 2c 20 66 65 6c 69 63 69 74 61 63 69 6f 6e 65 73 2c 20 65 6c 20 61 63 63 65 73 6f 20 61 20 6c 61 20 70 61 67 69 6e 61 20 73 65 63 72 65 74 61 20 65 73 74 61 20 65 6e 20 65 73 74 61 20 6d 69 73 6d 61 20 6e 6f 74 61 0a 54 6f 64 6f 20 65 6c 20 63 6f 6e 74 65 6e 69 64 6f 20 66 75 65 20 68 65 63 68 6f 20 70 6f 72 20 6d 69 2c 20 6f 53 43 41 52 20 64 55 52 41 4e 2c 20 65 73 74 65 20 65 73 20 75 6e 20 70 72 6f 79 65 63 74 6f 20 70 65 72 73 6f 6e 61 6c 20 61 6c 20 71 75 65 20 6c 65 20 74 65 6e 67 6f 20 62 61 73 74 61 6e 74 65 20 61 66 65 63 74 6f 20 79 20 63 72 65 6f 20 71 75 65 20 63 6f 6e 20 6c 61 20 73 75 66 69 63 69 65 6e 74 65 20 65 78 70 6f 73 69 63 69 6f 6e 20 6d 65 20 70 75 65 64 65 20 64 61 72 20 6f 74 72 6f 20 70 72 6f 79 65 63 74 6f 20 6d 61 73 20 61 6d 62 69 63 69 6f 73 6f -->
  </body>
